@@ -24,6 +24,8 @@
 #include <iostream>
 #include <fstream>
 #include <pthread.h>
+#include <sstream>
+#include <string>
 
 
 /*********************************************************************
@@ -36,6 +38,7 @@
 #include <tf/transform_listener.h>
 #include <tf/transform_broadcaster.h>
 #include <tf_conversions/tf_eigen.h>
+#include "turtle_vis/myClass/TurtleClass.h"
 
 /*********************************************************************
 * EIGEN INCLUDES
@@ -64,10 +67,10 @@ int main(int argc, char** argv)
     ros::Rate r(60);
 
     //INITIALIZE THE CLIENT
-    ros::ServiceClient client=n.serviceClient<TURTLE_SERVICE_TYPE/*//#>>>>TODO: DEFINE THE SERVICE TYPE*/>("TurtlePose");
+    ros::ServiceClient client=n.serviceClient<turtle_vis::send_desired_pose>("TurtlePose");
 
     ////#>>>>TODO: DEFINE A MSG VARIABLE FOR THE SERVICE MESSAGE
-    XXXXXXXXX msg;
+    turtle_vis::send_desired_pose srv;
 
     std::string myString;
 
@@ -81,24 +84,36 @@ int main(int argc, char** argv)
         std::vector<double> vals;
 
         ROS_INFO_STREAM("Give me the desired position of the turtle: x,y,theta");
+        ROS_INFO_STREAM("NOTE: please split by ','");
         std::cin>>myString;
 
         ////#>>>>TODO:GET THE VALUES FROM THE TERMINAL AND SAVE THEM IN A LOCAL VARIABLE. YOU WILL GET X,Y AND THETA
+        std::stringstream temp;
+        std::string s;
+        temp << myString;
+
+        while (getline(temp, s, ',')) {
+            vals.push_back(atof(s.c_str()));
+        }
 
         ////#>>>>TODO:CREATE THE MESSAGE WITH THE LOCAL VARIABLE
-
+        srv.request.x = vals[0];
+        srv.request.y = vals[1];
+        srv.request.theta = vals[2];
 
         ////#>>>>TODO:COMPUTE THE POSITION AND ORIENTATION OF THE TF FOR THE DESIRED POSITION
-        qtf.setRPY(0,0,////#>>>>TODO:USE THETA VARIABLE);
-        transform.setOrigin(tf::Vector3(/*//#>>>>TODO:USE X VARIABLE*/, /*//#>>>>TODO:USE Y VARIABLE*/, 0));
+        qtf.setRPY(0,0, srv.request.theta);
+        transform.setOrigin(tf::Vector3(srv.request.x, srv.request.y, 0));
         transform.setRotation(qtf);
 
         br.sendTransform(tf::StampedTransform(transform,ros::Time::now(),"/world","/turtle_desired"));
 
 
-        if(//#>>>>TODO:CALL THE CLIENT WITH msg)
+        if(client.call(srv))//#>>>>TODO:CALL THE CLIENT WITH msg)
         {
             //#>>>>TODO:PLOT THE MESSAGE
+            // ROS_INFO("DesiredPose is x:%d, y:%d, theta:%d", msg->x, msg->y, msg->theta);
+            ROS_INFO_STREAM("DesiredPose is x:" << srv.request.x << "y:" << srv.request.y << "theta" << srv.request.theta);
         }
         else
         {

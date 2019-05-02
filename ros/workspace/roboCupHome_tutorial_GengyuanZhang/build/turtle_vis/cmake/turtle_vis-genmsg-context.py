@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
-messages_str = ""
-services_str = ""
+messages_str = "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg"
+services_str = "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv"
 pkg_name = "turtle_vis"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

@@ -58,7 +58,7 @@ int main( int argc, char** argv )
     //ADVERTISE THE SERVICE
     turtleSpace::TurtleClass turtleF;
     ros::ServiceServer service=n.advertiseService("TurtlePose",
-                                                  &turtleSpace::TurtleClass::CALLBACKFUNCTION//#>>>>TODO: DEFINE THE CALLBACK FUNCTION,
+                                                  &turtleSpace::TurtleClass::getDPose,//#>>>>TODO: DEFINE THE CALLBACK FUNCTION,
                                                   &turtleF);
     //CALL SERVICE FROM TERMINAL//
     //    rosservice call /TurtlePose '{p: [0.5, 0.0, 3.0]}'
@@ -66,7 +66,7 @@ int main( int argc, char** argv )
     //DON'T FORGET TO SOURCE THE WORKSPACE BEFORE CALLING THE SERVICE
 
     //ADVERTIZE THE TOPIC
-    ros::Publisher pub=n.advertise<DESIRED_POSE_TOPIC/*#>>>>TODO: DEFINE THE MSG TYPE*/>("turtle_control",100);
+    ros::Publisher pub=n.advertise<turtle_vis::DesiredPose>("turtle_control",100);
 
     ros::Time ti, tf;
     ti=ros::Time::now();
@@ -74,16 +74,13 @@ int main( int argc, char** argv )
     //Proportional Gain
     Matrix3d Kp;
 
-
-   	
-
     //#>>>>TODO: SET GAINS
 
     double p_g=0.0;
 
     //#>>>>TODO: LOAD p_gain FROM THE ROS PARAMETER SERVER 
     
-    ros::param::get(/*/#>>>>TODO: DEFINE PARAMETER*/,p_g);
+    ros::param::get("/turtle_control_node/turtle_gains/p_gain",p_g);
     ROS_INFO_STREAM("p_g= "<<p_g);
 
 
@@ -107,12 +104,12 @@ int main( int argc, char** argv )
     //DESIRED POSE
     Vector3d turtlePose_desired_local;
     ////#>>>>TODO: INITIALIZE THE DESIRED POSE VARIABLE OF THE CLASS TURTLE
-    TURTLE_CLASS_MEMBER_VARIABLE=turtlePose;
+    turtleF.turtlePose_desired_g = turtlePose;
     turtlePose_desired_local=turtlePose;
 
 
     //CREATE A DESIREDPOSE MSG VARIABLE
-    turtle_vis::XXX msg; //#>>>>TODO:DEFINE THE MSG TYPE
+    turtle_vis::DesiredPose msg; //#>>>>TODO:DEFINE THE MSG TYPE
 
     while(ros::ok())
     {
@@ -121,20 +118,23 @@ int main( int argc, char** argv )
         dt=tf.toSec()-ti.toSec();
 
         ////#>>>>TODO: Get Desired Pose from the class variable
-        turtlePose_desired_local=turtleF.CALL_THE_METHOD_TO_OBTAIN_THE_DESIRED_POSE();
+        turtlePose_desired_local=turtleF.getLocalDesiredPose();
 
         //CONTROL
         ////#>>>>TODO:COMPUTE THE ERROR BETWEEN CURRENT POSE AND DESIRED
-        error=XXXXXXXX;
+        error = turtlePose_old - turtlePose_desired_local;
         // COMPUTE THE INCREMENTS
         turtleVel=-Kp*error;
 
         ////#>>>>TODO:COMPUTE THE NEW TURTLE POSE
-        turtlePose=//USE SIMPLE INTEGRATION;
+        turtlePose = turtleVel * dt + turtlePose_old;//USE SIMPLE INTEGRATION;
 
         //Publish Data
         ////#>>>>TODO:SET THE MSG VARIABLE WITH THE NEW TURTLE POSE
-
+        msg.x = turtlePose(0);
+        msg.y = turtlePose(1);
+        msg.theta = turtlePose(2);
+        
         pub.publish(msg);
 
         //SET THE HISTORY

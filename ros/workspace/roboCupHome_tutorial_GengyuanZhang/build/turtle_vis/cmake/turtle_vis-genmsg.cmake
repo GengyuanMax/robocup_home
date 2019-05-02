@@ -1,8 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(WARNING "Invoking generate_messages() without having added any message or service file before.
-You should either add add_message_files() and/or add_service_files() calls or remove the invocation of generate_messages().")
-message(STATUS "turtle_vis: 0 messages, 0 services")
+message(STATUS "turtle_vis: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Iturtle_vis:/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg;-Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg")
 
@@ -19,14 +17,36 @@ add_custom_target(turtle_vis_generate_messages ALL)
 
 
 
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" NAME_WE)
+add_custom_target(_turtle_vis_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "turtle_vis" "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" ""
+)
+
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" NAME_WE)
+add_custom_target(_turtle_vis_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "turtle_vis" "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" ""
+)
+
 #
 #  langs = gencpp;geneus;genlisp;gennodejs;genpy
 #
 
 ### Section generating for lang: gencpp
 ### Generating Messages
+_generate_msg_cpp(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Services
+_generate_srv_cpp(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Module File
 _generate_module_cpp(turtle_vis
@@ -40,6 +60,10 @@ add_custom_target(turtle_vis_generate_messages_cpp
 add_dependencies(turtle_vis_generate_messages turtle_vis_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_cpp _turtle_vis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_cpp _turtle_vis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(turtle_vis_gencpp)
@@ -50,8 +74,20 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS turtle_vis_generate_messages_cpp)
 
 ### Section generating for lang: geneus
 ### Generating Messages
+_generate_msg_eus(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Services
+_generate_srv_eus(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Module File
 _generate_module_eus(turtle_vis
@@ -65,6 +101,10 @@ add_custom_target(turtle_vis_generate_messages_eus
 add_dependencies(turtle_vis_generate_messages turtle_vis_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_eus _turtle_vis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_eus _turtle_vis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(turtle_vis_geneus)
@@ -75,8 +115,20 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS turtle_vis_generate_messages_eus)
 
 ### Section generating for lang: genlisp
 ### Generating Messages
+_generate_msg_lisp(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Services
+_generate_srv_lisp(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Module File
 _generate_module_lisp(turtle_vis
@@ -90,6 +142,10 @@ add_custom_target(turtle_vis_generate_messages_lisp
 add_dependencies(turtle_vis_generate_messages turtle_vis_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_lisp _turtle_vis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_lisp _turtle_vis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(turtle_vis_genlisp)
@@ -100,8 +156,20 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS turtle_vis_generate_messages_lisp)
 
 ### Section generating for lang: gennodejs
 ### Generating Messages
+_generate_msg_nodejs(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Services
+_generate_srv_nodejs(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Module File
 _generate_module_nodejs(turtle_vis
@@ -115,6 +183,10 @@ add_custom_target(turtle_vis_generate_messages_nodejs
 add_dependencies(turtle_vis_generate_messages turtle_vis_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_nodejs _turtle_vis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_nodejs _turtle_vis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(turtle_vis_gennodejs)
@@ -125,8 +197,20 @@ list(APPEND ${PROJECT_NAME}_EXPORTED_TARGETS turtle_vis_generate_messages_nodejs
 
 ### Section generating for lang: genpy
 ### Generating Messages
+_generate_msg_py(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Services
+_generate_srv_py(turtle_vis
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/turtle_vis
+)
 
 ### Generating Module File
 _generate_module_py(turtle_vis
@@ -140,6 +224,10 @@ add_custom_target(turtle_vis_generate_messages_py
 add_dependencies(turtle_vis_generate_messages turtle_vis_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/msg/DesiredPose.msg" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_py _turtle_vis_generate_messages_check_deps_${_filename})
+get_filename_component(_filename "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/src/turtle_vis/srv/send_desired_pose.srv" NAME_WE)
+add_dependencies(turtle_vis_generate_messages_py _turtle_vis_generate_messages_check_deps_${_filename})
 
 # target for backward compatibility
 add_custom_target(turtle_vis_genpy)

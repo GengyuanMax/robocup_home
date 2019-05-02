@@ -390,17 +390,25 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 # Directory level rules for directory turtle_vis
 
 # Convenience name for "all" pass in the directory.
+turtle_vis/all: turtle_vis/CMakeFiles/turtle_set_position.dir/all
+turtle_vis/all: turtle_vis/CMakeFiles/turtle_control_node.dir/all
+turtle_vis/all: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all
+turtle_vis/all: turtle_vis/CMakeFiles/turtle_vis_node.dir/all
 turtle_vis/all: turtle_vis/CMakeFiles/turtle_vis_generate_messages.dir/all
 
 .PHONY : turtle_vis/all
 
 # Convenience name for "clean" pass in the directory.
+turtle_vis/clean: turtle_vis/CMakeFiles/turtle_set_position.dir/clean
+turtle_vis/clean: turtle_vis/CMakeFiles/turtle_control_node.dir/clean
+turtle_vis/clean: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_genlisp.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_geneus.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_gencpp.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/clean
+turtle_vis/clean: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/visualization_msgs_generate_messages_py.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/visualization_msgs_generate_messages_nodejs.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/visualization_msgs_generate_messages_lisp.dir/clean
@@ -413,6 +421,7 @@ turtle_vis/clean: turtle_vis/CMakeFiles/std_msgs_generate_messages_lisp.dir/clea
 turtle_vis/clean: turtle_vis/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_node.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/tf_generate_messages_eus.dir/clean
@@ -438,6 +447,7 @@ turtle_vis/clean: turtle_vis/CMakeFiles/geometry_msgs_generate_messages_py.dir/c
 turtle_vis/clean: turtle_vis/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/tf_generate_messages_lisp.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
+turtle_vis/clean: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/roscpp_generate_messages_py.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/tf_generate_messages_nodejs.dir/clean
 turtle_vis/clean: turtle_vis/CMakeFiles/turtle_vis_genpy.dir/clean
@@ -465,6 +475,117 @@ turtle_vis/preinstall:
 .PHONY : turtle_vis/preinstall
 
 #=============================================================================
+# Target rules for target turtle_vis/CMakeFiles/turtle_set_position.dir
+
+# All Build rule for target.
+turtle_vis/CMakeFiles/turtle_set_position.dir/all:
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_set_position.dir/build.make turtle_vis/CMakeFiles/turtle_set_position.dir/depend
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_set_position.dir/build.make turtle_vis/CMakeFiles/turtle_set_position.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=16,17 "Built target turtle_set_position"
+.PHONY : turtle_vis/CMakeFiles/turtle_set_position.dir/all
+
+# Include target in all.
+all: turtle_vis/CMakeFiles/turtle_set_position.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+turtle_vis/CMakeFiles/turtle_set_position.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_set_position.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+.PHONY : turtle_vis/CMakeFiles/turtle_set_position.dir/rule
+
+# Convenience name for target.
+turtle_set_position: turtle_vis/CMakeFiles/turtle_set_position.dir/rule
+
+.PHONY : turtle_set_position
+
+# clean rule for target.
+turtle_vis/CMakeFiles/turtle_set_position.dir/clean:
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_set_position.dir/build.make turtle_vis/CMakeFiles/turtle_set_position.dir/clean
+.PHONY : turtle_vis/CMakeFiles/turtle_set_position.dir/clean
+
+# clean rule for target.
+clean: turtle_vis/CMakeFiles/turtle_set_position.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target turtle_vis/CMakeFiles/turtle_control_node.dir
+
+# All Build rule for target.
+turtle_vis/CMakeFiles/turtle_control_node.dir/all: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_control_node.dir/build.make turtle_vis/CMakeFiles/turtle_control_node.dir/depend
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_control_node.dir/build.make turtle_vis/CMakeFiles/turtle_control_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=12,13 "Built target turtle_control_node"
+.PHONY : turtle_vis/CMakeFiles/turtle_control_node.dir/all
+
+# Include target in all.
+all: turtle_vis/CMakeFiles/turtle_control_node.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+turtle_vis/CMakeFiles/turtle_control_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_control_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+.PHONY : turtle_vis/CMakeFiles/turtle_control_node.dir/rule
+
+# Convenience name for target.
+turtle_control_node: turtle_vis/CMakeFiles/turtle_control_node.dir/rule
+
+.PHONY : turtle_control_node
+
+# clean rule for target.
+turtle_vis/CMakeFiles/turtle_control_node.dir/clean:
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_control_node.dir/build.make turtle_vis/CMakeFiles/turtle_control_node.dir/clean
+.PHONY : turtle_vis/CMakeFiles/turtle_control_node.dir/clean
+
+# clean rule for target.
+clean: turtle_vis/CMakeFiles/turtle_control_node.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target turtle_vis/CMakeFiles/turtle_ros_tutorial.dir
+
+# All Build rule for target.
+turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all:
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/build.make turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/depend
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/build.make turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=14,15 "Built target turtle_ros_tutorial"
+.PHONY : turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all
+
+# Include target in all.
+all: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+.PHONY : turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/rule
+
+# Convenience name for target.
+turtle_ros_tutorial: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/rule
+
+.PHONY : turtle_ros_tutorial
+
+# clean rule for target.
+turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/clean:
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/build.make turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/clean
+.PHONY : turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/clean
+
+# clean rule for target.
+clean: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target turtle_vis/CMakeFiles/turtle_vis_genlisp.dir
 
 # All Build rule for target.
@@ -476,7 +597,7 @@ turtle_vis/CMakeFiles/turtle_vis_genlisp.dir/all: turtle_vis/CMakeFiles/turtle_v
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_genlisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_genlisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_genlisp.dir/rule
@@ -500,15 +621,17 @@ clean: turtle_vis/CMakeFiles/turtle_vis_genlisp.dir/clean
 # Target rules for target turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir
 
 # All Build rule for target.
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/all: turtle_vis/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/depend
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num= "Built target turtle_vis_generate_messages_lisp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=23,24 "Built target turtle_vis_generate_messages_lisp"
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_lisp.dir/rule
@@ -540,7 +663,7 @@ turtle_vis/CMakeFiles/turtle_vis_geneus.dir/all: turtle_vis/CMakeFiles/turtle_vi
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_geneus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_geneus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_geneus.dir/rule
@@ -564,15 +687,17 @@ clean: turtle_vis/CMakeFiles/turtle_vis_geneus.dir/clean
 # Target rules for target turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir
 
 # All Build rule for target.
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/all: turtle_vis/CMakeFiles/std_msgs_generate_messages_eus.dir/all
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/depend
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=12 "Built target turtle_vis_generate_messages_eus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=20,21,22 "Built target turtle_vis_generate_messages_eus"
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_eus.dir/rule
@@ -604,7 +729,7 @@ turtle_vis/CMakeFiles/turtle_vis_gencpp.dir/all: turtle_vis/CMakeFiles/turtle_vi
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_gencpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_gencpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_gencpp.dir/rule
@@ -628,15 +753,17 @@ clean: turtle_vis/CMakeFiles/turtle_vis_gencpp.dir/clean
 # Target rules for target turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir
 
 # All Build rule for target.
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/all: turtle_vis/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/depend
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num= "Built target turtle_vis_generate_messages_cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=18,19 "Built target turtle_vis_generate_messages_cpp"
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/rule
@@ -653,6 +780,38 @@ turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: turtle_vis/CMakeFiles/turtle_vis_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir
+
+# All Build rule for target.
+turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all:
+	$(MAKE) -f turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/build.make turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/depend
+	$(MAKE) -f turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/build.make turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num= "Built target _turtle_vis_generate_messages_check_deps_DesiredPose"
+.PHONY : turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
+
+# Build rule for subdir invocation for target.
+turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+.PHONY : turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/rule
+
+# Convenience name for target.
+_turtle_vis_generate_messages_check_deps_DesiredPose: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/rule
+
+.PHONY : _turtle_vis_generate_messages_check_deps_DesiredPose
+
+# clean rule for target.
+turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/clean:
+	$(MAKE) -f turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/build.make turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/clean
+.PHONY : turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/clean
+
+# clean rule for target.
+clean: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/clean
 
 .PHONY : clean
 
@@ -860,7 +1019,7 @@ turtle_vis/CMakeFiles/turtle_vis_gennodejs.dir/all: turtle_vis/CMakeFiles/turtle
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_gennodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_gennodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_gennodejs.dir/rule
@@ -1037,6 +1196,43 @@ turtle_vis/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
 
 # clean rule for target.
 clean: turtle_vis/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target turtle_vis/CMakeFiles/turtle_vis_node.dir
+
+# All Build rule for target.
+turtle_vis/CMakeFiles/turtle_vis_node.dir/all: turtle_vis/CMakeFiles/turtle_ros_tutorial.dir/all
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_node.dir/build.make turtle_vis/CMakeFiles/turtle_vis_node.dir/depend
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_node.dir/build.make turtle_vis/CMakeFiles/turtle_vis_node.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=31,32 "Built target turtle_vis_node"
+.PHONY : turtle_vis/CMakeFiles/turtle_vis_node.dir/all
+
+# Include target in all.
+all: turtle_vis/CMakeFiles/turtle_vis_node.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+turtle_vis/CMakeFiles/turtle_vis_node.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_node.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+.PHONY : turtle_vis/CMakeFiles/turtle_vis_node.dir/rule
+
+# Convenience name for target.
+turtle_vis_node: turtle_vis/CMakeFiles/turtle_vis_node.dir/rule
+
+.PHONY : turtle_vis_node
+
+# clean rule for target.
+turtle_vis/CMakeFiles/turtle_vis_node.dir/clean:
+	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_node.dir/build.make turtle_vis/CMakeFiles/turtle_vis_node.dir/clean
+.PHONY : turtle_vis/CMakeFiles/turtle_vis_node.dir/clean
+
+# clean rule for target.
+clean: turtle_vis/CMakeFiles/turtle_vis_node.dir/clean
 
 .PHONY : clean
 
@@ -1428,15 +1624,17 @@ clean: turtle_vis/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 # Target rules for target turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir
 
 # All Build rule for target.
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/all: turtle_vis/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/depend
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num= "Built target turtle_vis_generate_messages_nodejs"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=25,26 "Built target turtle_vis_generate_messages_nodejs"
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_nodejs.dir/rule
@@ -1588,15 +1786,17 @@ clean: turtle_vis/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 # Target rules for target turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir
 
 # All Build rule for target.
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_DesiredPose.dir/all
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/all: turtle_vis/CMakeFiles/std_msgs_generate_messages_py.dir/all
+turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/all: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/depend
 	$(MAKE) -f turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/build.make turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num= "Built target turtle_vis_generate_messages_py"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num=27,28,29,30 "Built target turtle_vis_generate_messages_py"
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages_py.dir/rule
@@ -1669,7 +1869,7 @@ all: turtle_vis/CMakeFiles/turtle_vis_generate_messages.dir/all
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_generate_messages.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 1
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 13
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_generate_messages.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_generate_messages.dir/rule
@@ -1850,6 +2050,38 @@ clean: turtle_vis/CMakeFiles/tf2_msgs_generate_messages_nodejs.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir
+
+# All Build rule for target.
+turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all:
+	$(MAKE) -f turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/build.make turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/depend
+	$(MAKE) -f turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/build.make turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles --progress-num= "Built target _turtle_vis_generate_messages_check_deps_send_desired_pose"
+.PHONY : turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
+
+# Build rule for subdir invocation for target.
+turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+.PHONY : turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/rule
+
+# Convenience name for target.
+_turtle_vis_generate_messages_check_deps_send_desired_pose: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/rule
+
+.PHONY : _turtle_vis_generate_messages_check_deps_send_desired_pose
+
+# clean rule for target.
+turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/clean:
+	$(MAKE) -f turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/build.make turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/clean
+.PHONY : turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/clean
+
+# clean rule for target.
+clean: turtle_vis/CMakeFiles/_turtle_vis_generate_messages_check_deps_send_desired_pose.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
 # Target rules for target turtle_vis/CMakeFiles/roscpp_generate_messages_py.dir
 
 # All Build rule for target.
@@ -1925,7 +2157,7 @@ turtle_vis/CMakeFiles/turtle_vis_genpy.dir/all: turtle_vis/CMakeFiles/turtle_vis
 
 # Build rule for subdir invocation for target.
 turtle_vis/CMakeFiles/turtle_vis_genpy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 turtle_vis/CMakeFiles/turtle_vis_genpy.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/build/CMakeFiles 0
 .PHONY : turtle_vis/CMakeFiles/turtle_vis_genpy.dir/rule

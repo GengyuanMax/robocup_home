@@ -1,8 +1,8 @@
-prefix=/usr/local
+prefix=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/install
 
 Name: turtle_vis
 Description: Description of turtle_vis
 Version: 0.0.0
-Cflags: -I/usr/local/include
-Libs: -L/usr/local/lib 
+Cflags: -I/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/install/include
+Libs: -L/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/install/lib -lturtle_vis
 Requires: roscpp rospy std_msgs tf tf_conversions visualization_msgs message_run

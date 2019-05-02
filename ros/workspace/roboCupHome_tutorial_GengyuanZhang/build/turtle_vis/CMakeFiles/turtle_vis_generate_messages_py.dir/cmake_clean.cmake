@@ -1,3 +1,10 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/turtle_vis_generate_messages_py"
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/devel/lib/python2.7/dist-packages/turtle_vis/msg/_DesiredPose.py"
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/devel/lib/python2.7/dist-packages/turtle_vis/srv/_send_desired_pose.py"
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/devel/lib/python2.7/dist-packages/turtle_vis/msg/__init__.py"
+  "/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/devel/lib/python2.7/dist-packages/turtle_vis/srv/__init__.py"
+)
 
 # Per-language clean rules from dependency scanning.
 foreach(lang )
