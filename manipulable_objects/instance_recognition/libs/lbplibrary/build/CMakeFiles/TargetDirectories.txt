@@ -1,0 +1,8 @@
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/rebuild_cache.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/edit_cache.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/install.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/list_install_components.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/lbp.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/lbp_bin.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/install/strip.dir
+/home/lmartinez/catkin_ws/src/rhome_perception/manipulable_objects/instance_recognition/libs/lbplibrary/build/CMakeFiles/install/local.dir

@@ -1,0 +1,51 @@
+<launch>
+    <include file="$(find realsense_camera)/launch/sr300_nodelet_default.launch" />
+
+	<arg name="service_emotion" 	default="emotion" />
+	<arg name="service_gender" 	default="gender" />
+	<arg name="graph_path_emotion" 	default="/home/rosmosys/keras2cpp/emotionnet.pb" />
+	<arg name="graph_path_gender" 	default="/home/rosmosys/keras2cpp/gendernet.pb" />
+
+    <arg name="det_topic_img"   default="/camera/color/image_raw" />
+	<arg name="det_topic_face"  default="face" />
+	<arg name="det_topic_roi"   default="roi" />
+	<arg name="det_service_recg"    default="/face_recognition/recognize" />
+	<arg name="det_service_gender"  default="/gender_emotion_recognition/gender" />
+	<arg name="det_service_emotion" default="/gender_emotion_recognition/emotion" />
+	<arg name="det_filepath"    default="/home/rosmosys/MTCNN-light/" />
+    <arg name="det_crop_width"      default=100.0/>
+    <arg name="det_crop_height"     default=100.0/>
+
+	<arg name="recg_database_path" 	default="/home/rosmosys/catkin_ws/src/rhome_perception/person/face_recognition/data/database.csv" />
+	<arg name="recg_graph_path" 	default="/home/rosmosys/catkin_ws/src/rhome_perception/person/face_recognition/model/20180402-114759/20180402-114759.pb" />
+	<arg name="service_recg" 	default="recognize" />
+	
+
+
+    <node name="face_recognition" pkg="face_recognition" type="face_recognition" output="screen" >
+        <param name="database_path" 	value="$(arg recg_database_path)"/>
+        <param name="graph_path" 	value="$(arg recg_graph_path)"/>
+        <param name="service_recg" 	value="$(arg service_recg)"/>
+    </node>
+
+    <node name="gender_emotion_recognition" pkg="gender_emotion_recognition" type="gender_emotion_recognition" output="screen" >
+        <param name="service_emotion" 	value="$(arg service_emotion)"/>
+        <param name="service_gender" 	value="$(arg service_gender)"/>
+        <param name="graph_path_emotion" 	value="$(arg graph_path_emotion)"/>
+        <param name="graph_path_gender" 	value="$(arg graph_path_gender)"/>
+    </node>
+
+     <node name="face_detection" pkg="face_detection" type="face_detection" output="screen"  >
+        <param name="topic_img" 	value="$(arg det_topic_img)"/>
+        <param name="topic_face" 	value="$(arg det_topic_face)"/>
+        <param name="topic_roi" 	value="$(arg det_topic_roi)"/>
+        <param name="service_recg" 	value="$(arg det_service_recg)"/>
+        <param name="service_gender" 	value="$(arg det_service_gender)"/>
+        <param name="service_emotion" 	value="$(arg det_service_emotion)"/>
+        <param name="filepath" 	value="$(arg det_filepath)"/>
+        <param name="crop_width" 	value="$(arg det_crop_width)"/>
+        <param name="crop_height" 	value="$(arg det_crop_height)"/>
+    </node>
+
+
+</launch>

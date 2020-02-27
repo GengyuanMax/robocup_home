@@ -1,0 +1,25 @@
+<launch>
+	<arg name="det_topic_img"   default="/camera/color/image_raw" />
+	<arg name="det_topic_face"  default="face" />
+	<arg name="det_topic_roi"   default="roi" />
+	<arg name="det_service_recg"    default="/face_recognition/recognize" />
+	<arg name="det_service_gender"  default="/gender_emotion_recognition/gender" />
+	<arg name="det_service_emotion" default="/gender_emotion_recognition/emotion" />
+	<arg name="det_filepath"    default="/home/rosmosys/MTCNN-light/" />
+    <arg name="det_crop_width"      default=100.0/>
+    <arg name="det_crop_height"     default=100.0/>
+
+
+    <node name="face_detection" pkg="face_detection" type="face_detection" output="screen"  >
+        <param name="topic_img" 	value="$(arg det_topic_img)"/>
+        <param name="topic_face" 	value="$(arg det_topic_face)"/>
+        <param name="topic_roi" 	value="$(arg det_topic_roi)"/>
+        <param name="service_recg" 	value="$(arg det_service_recg)"/>
+        <param name="service_gender" 	value="$(arg det_service_gender)"/>
+        <param name="service_emotion" 	value="$(arg det_service_emotion)"/>
+        <param name="filepath" 	value="$(arg det_filepath)"/>
+        <param name="crop_width" 	value="$(arg det_crop_width)"/>
+        <param name="crop_height" 	value="$(arg det_crop_height)"/>
+    </node>
+
+</launch>

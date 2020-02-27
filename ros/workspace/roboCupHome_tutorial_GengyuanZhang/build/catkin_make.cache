@@ -1,2 +1,0 @@
-turtle_vis
--DCATKIN_DEVEL_PREFIX=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/devel -DCMAKE_INSTALL_PREFIX=/home/zhanggengyuan/robocup_home/ros/workspace/roboCupHome_tutorial_GengyuanZhang/install -G Unix Makefiles

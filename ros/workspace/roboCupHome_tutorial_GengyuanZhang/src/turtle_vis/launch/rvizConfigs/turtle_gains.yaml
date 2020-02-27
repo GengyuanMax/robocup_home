@@ -1,4 +1,0 @@
-# Gains for the turtle visualization
-turtle_gains:
- #Proportional gain
- p_gain: 1 #//TODO: Define a value for the p gain

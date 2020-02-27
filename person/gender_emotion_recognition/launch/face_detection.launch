@@ -1,0 +1,22 @@
+<launch>
+    <include file="$(find realsense_camera)/launch/sr300_nodelet_default.launch" />
+
+	<arg name="service_emotion" 	default="emotion" />
+	<arg name="service_gender" 	default="gender" />
+	<arg name="graph_path_emotion" 	default="/home/rosmosys/keras2cpp/emotionnet.pb" />
+	<arg name="graph_path_gender" 	default="/home/rosmosys/keras2cpp/gendernet.pb" />
+
+
+    <node name="face_recognition" pkg="face_recognition" type="face_recognition" output="screen" />
+
+    <node name="gender_emotion_recognition" pkg="gender_emotion_recognition" type="gender_emotion_recognition" output="screen" >
+        <param name="service_emotion" 	value="$(arg service_emotion)"/>
+        <param name="service_gender" 	value="$(arg service_gender)"/>
+        <param name="graph_path_emotion" 	value="$(arg graph_path_emotion)"/>
+        <param name="graph_path_gender" 	value="$(arg graph_path_gender)"/>
+    </node>
+
+
+    <node name="face_detection" pkg="face_detection" type="face_detection" output="screen" />
+
+</launch>

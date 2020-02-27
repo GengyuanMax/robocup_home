@@ -1,0 +1,14 @@
+<launch>
+
+
+	<arg name="recg_database_path" 	default="/home/rosmosys/catkin_ws/src/rhome_perception/person/face_recognition/data/database.csv" />
+	<arg name="recg_graph_path" 	default="/home/rosmosys/catkin_ws/src/rhome_perception/person/face_recognition/model/20180402-114759/20180402-114759.pb" />
+	<arg name="service_recg" 	default="recognize" />
+	
+    <node name="face_recognition" pkg="face_recognition" type="face_recognition" output="screen" >
+        <param name="database_path" 	value="$(arg recg_database_path)"/>
+        <param name="graph_path" 	value="$(arg recg_graph_path)"/>
+        <param name="service_recg" 	value="$(arg service_recg)"/>
+    </node>
+
+</launch>

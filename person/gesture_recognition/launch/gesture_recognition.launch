@@ -1,0 +1,23 @@
+<launch>
+    <include file="$(find realsense_camera)/launch/sr300_nodelet_default.launch" />
+
+
+	<arg name="graph_path_det" 	default="/home/rosmosys/catkin_ws/src/rhome_perception/person/gesture_recognition/model/frozen_inference_graph.pb"/>
+	<arg name="graph_path_cls" 	default="/home/rosmosys/catkin_ws/src/rhome_perception/person/gesture_recognition/model/hand_poses_wGarbage_10.pb" />
+	<arg name="topic_img" 	default="/camera/color/image_raw" />
+	<arg name="topic_gesture" 	default="gesture" />
+
+
+	<node name="gesture_recognition" pkg="gesture_recognition" type="gesture_recognition" output="screen" > 
+		<param name="graph_path_det" 	value="$(arg graph_path_det)"/>
+        <param name="graph_path_cls" 	value="$(arg graph_path_cls)"/>
+        <param name="topic_img" 	value="$(arg topic_img)"/>
+        <param name="topic_gesture" 	value="$(arg topic_gesture)"/>
+	</node>
+
+	<node type="rviz"
+			name="rviz"
+			pkg="rviz"
+			args="-d ${find package_name)/rviz/config_file.rviz" />
+    
+</launch>
